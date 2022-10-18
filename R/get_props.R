@@ -94,6 +94,19 @@ get_props <- function(site, sport, prop, raw_data = NULL, save_path = NULL) {
     output_df$timestamp <- Sys.time()
     return(output_df)
   }
+
+  if (site %in% c('csr', 'caesars')) {
+    if (is.null(raw_data)) {
+      csr_raw <- get_caesars_data(sport = sport, sleep_time = .01, save_path = save_path)
+    } else {
+      csr_raw <- raw_data
+    }
+    csr_parsed <- parse_caesars_data(csr_raw, sport = sport, prop = prop)
+    csr_tidy <- tidyup_caesars_data(csr_parsed, sport = sport, prop = prop)
+    output_df <- csr_tidy
+    output_df$timestamp <- Sys.time()
+    return(output_df)
+  }
 }
 
 

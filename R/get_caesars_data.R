@@ -1,7 +1,7 @@
 get_caesars_data <- function(sport, save_path = NULL, sleep_time = 0) {
 
   # get all the events, and index by sportId
-  main_URI <- 'https://www.williamhill.com/us/il/bet/api/v3/events/highlights/?promotedOnly=true'
+  main_URI <- 'https://www.williamhill.com/us/il/bet/api/v3/events/highlights/?promotedOnly=false'
   main_query <- list()
   main_content <- get_content(main_URI, main_query)
   sport_index <- unlist(lapply(main_content, '[[', 'sportId'))
@@ -12,8 +12,16 @@ get_caesars_data <- function(sport, save_path = NULL, sleep_time = 0) {
     competition <- sport_element$competitions[[which(competition_index == 'NFL')]]
   }
 
+  if (sport == 'nba') {
+    sport_element <- main_content[[which(sport_index == 'basketball')]]
+    competition_index <- unlist(lapply(sport_element$competitions, '[[', 'name'))
+    competition <- sport_element$competitions[[which(competition_index == 'NBA')]]
+  }
+
   event_name_list <- list()
   for (i in competition$events) {
+
+    if (i$active == FALSE) next
     event_name_row <- data.frame(
       event_id = i[['id']],
       event_name = i[['name']]
