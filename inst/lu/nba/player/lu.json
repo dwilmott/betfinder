@@ -1957,7 +1957,7 @@
   },
   {
     "name": "Collin Sexton",
-    "aliases": ["collinsexton", "collin sexton", "COLLIN SEXTON"]
+    "aliases": ["collinsexton", "collin sexton", "COLLIN SEXTON", "colinsexton"]
   },
   {
     "name": "Theo Pinson",
@@ -3377,7 +3377,7 @@
   },
     {
     "name": "Herbert Jones",
-    "aliases": ["herbert jones", "herbertjones"]
+    "aliases": ["herbert jones", "herbertjones", "herbetjones"]
   },
     {
     "name": "Corey Kispert",
@@ -3526,5 +3526,9 @@
   {
     "name": "Trey Murphy III",
     "aliases": ["Trey Murphy"]
+  },
+  {
+    "name": "Jabari Smith Jr.",
+    "aliases": ["jabarismith", "jabari smith", "jabari smith jr.", "jabarismithjr"]
   }
 ]
