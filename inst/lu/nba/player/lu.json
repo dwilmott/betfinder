@@ -2229,7 +2229,7 @@
   },
   {
     "name": "Nicolas Claxton",
-    "aliases": ["nicolasclaxton", "nicolas claxton", "NICOLAS CLAXTON", "Nicolas Claxton"]
+    "aliases": ["nicolasclaxton", "nicolas claxton", "NICOLAS CLAXTON", "Nicolas Claxton", "nicclaxton"]
   },
   {
     "name": "Greg Whittington",
@@ -3531,17 +3531,21 @@
     "name": "Jabari Smith Jr.",
     "aliases": ["jabarismith", "jabari smith", "jabari smith jr.", "jabarismithjr"]
   },
-   {
+  {
     "name": "Paolo Banchero",
     "aliases": ["paolobanchero", "paolo banchero"]
   },
-   {
+  {
     "name": "Jaden Ivey",
-    "aliases": ["jadenivey", "jaden ivey"]
+    "aliases": ["jadenivey", "jaden ivey", "jadeyivey"]
   },
-   {
+  {
     "name": "Jeremy Sochan",
     "aliases": ["jeremysochan", "jeremy sochan"]
+  },
+  {
+    "name": "Santi Aldama",
+    "aliases": ["santialdama", "santi aldama"]
   }
 ]
 
