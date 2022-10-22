@@ -1821,7 +1821,7 @@
   },
   {
     "name": "Luguentz Dort",
-    "aliases": ["luguentzdort", "luguentz dort", "LUGUENTZ DORT"]
+    "aliases": ["luguentzdort", "luguentz dort", "LUGUENTZ DORT", "ludort"]
   },
   {
     "name": "Will Barton",
@@ -3329,7 +3329,7 @@
   },
   {
     "name": "Jeremiah Robinson-Earl",
-    "aliases": ["jeremiahrobinsonearl", "jeremiah robinson-earl"]
+    "aliases": ["jeremiahrobinsonearl", "jeremiah robinson-earl", "jeremiahroninsonearl"]
   },
   {
     "name": "Jonathan Kuminga",
@@ -3550,6 +3550,10 @@
   {
     "name": "Keegan Murray",
     "aliases": ["keeganmurray", "keegan murray"]
+  },
+    {
+    "name": "Tari Eason",
+    "aliases": ["tarieason", "tari eason"]
   }
 ]
 
