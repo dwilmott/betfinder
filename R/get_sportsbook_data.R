@@ -15,9 +15,12 @@ get_sportsbook_data <- function(sportsbook = NA_character_,
 
   # execute the correct get call for the sportsbook and sport
   if (is.na(sport)) stop('missing sport arg')
+  else if (sportsbook == 'barstool') sportsbook_data <- get_barstool_data(sport = sport)
   else if (sportsbook == 'betrivers') sportsbook_data <- get_betrivers_data(sport = sport)
+  else if (sportsbook == 'caesars') sportsbook_data <- get_caesars_data(sport = sport)
   else if (sportsbook == 'draftkings') sportsbook_data <- get_draftkings_data(sport = sport)
   else if (sportsbook == 'fanduel') sportsbook_data <- get_fanduel_data(sport = sport)
+  else if (sportsbook == 'mgm') sportsbook_data <- get_mgm_data(sport = sport)
   else if (sportsbook == 'pointsbet') sportsbook_data <- get_pointsbet_data(sport = sport)
   else stop('either a missing sportsbook or a sportsbook that we have not yet added')
 
