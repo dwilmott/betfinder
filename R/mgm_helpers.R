@@ -12,7 +12,7 @@ parse_mgm_prop <- function(game_event, prop_name = FALSE, prop_regex = NULL, pro
       prop_content <- prop_content[!grepl(prop_not_regex, prop_content$name.value), ]
     }
 
-    outcomes_df <- dplyr::bind_rows(prop_content$results[[1]])
+    outcomes_df <- dplyr::bind_rows(prop_content$results)
   }
 
   if (!('outcomes_df' %in% ls())) return()
