@@ -23,7 +23,7 @@ parse_mgm_data <- function(mgm_data, sport, prop = FALSE, game_lines = FALSE) {
     }
     if (prop %in% c('first player to score', 'fpts')) {
       output_list[[length(output_list) + 1]] <-
-        parse_mgm_prop(game_event = game_event, prop_name = 'First Field Goal Scorer',
+        parse_mgm_prop(game_event = game_event, prop_name = 'First Field Goal',
                       matchup = matchup, tipoff = tipoff)
     }
     if (prop %in% c('fpts by team')) {
