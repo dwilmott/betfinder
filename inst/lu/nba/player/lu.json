@@ -3555,12 +3555,16 @@
     "name": "Christian Koloko",
     "aliases": ["christiankoloko", "christian koloko"]
   },
-    {
+  {
     "name": "Tari Eason",
     "aliases": ["tarieason", "tari eason"]
   },
-    {
+  {
     "name": "James Bouknight",
     "aliases": ["jamesbouknight", "james bouknight"]
+  },
+  {
+    "name": "Shaedon Sharpe",
+    "aliases": ["shaedonsharpe", "shaedon sharpe"]
   }
 ]
