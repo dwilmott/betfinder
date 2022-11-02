@@ -6,7 +6,7 @@ get_mgm_data <- function(sport, save_path = NULL, sleep_time = 0) {
     fixture_path <- paste0('https://raw.githubusercontent.com/jimtheflash/gambling_stuff/main/data/01_raw/mgm_nba_fixture_ids/',
                            today_no_dashes,
                            '.csv')
-    fixtures <- unlist(read.csv(fixture_path))
+    fixtures <- unlist(read.csv(fixture_path, header = FALSE))
 
   } else {
     stop('sport not supported')
