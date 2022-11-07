@@ -321,7 +321,7 @@
   },
   {
     "name": "Kenyon Martin Jr.",
-    "aliases": ["kenyonmartin", "kenyon martin jr.", "KENYON MARTIN JR.", "Kenyon Martin", "kenyon martin", "KENYON MARTIN"]
+    "aliases": ["kenyonmartin", "kenyon martin jr.", "KENYON MARTIN JR.", "Kenyon Martin", "kenyon martin", "KENYON MARTIN", "kjmartin"]
   },
   {
     "name": "Trevelin Queen",
@@ -3578,5 +3578,13 @@
   {
     "name": "Malaki Branham",
     "aliases": ["malakibranham", "malaki branham"]
+  },
+  {
+    "name": "MarJon Beauchamp",
+    "aliases": ["marjonbeauchamp", "marjon beauchamp"]
+  },
+  {
+    "name": "Bennedict Mathurin",
+    "aliases": ["bennedictmathurin", "bennedictmathurin"]
   }
 ]
