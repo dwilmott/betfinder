@@ -3355,31 +3355,31 @@
     "name": "Scottie Barnes",
     "aliases": ["scottie barnes", "scottiebarnes"]
   },
-    {
+  {
     "name": "Jalen Suggs",
     "aliases": ["jalen suggs", "jalensuggs"]
   },
-    {
+  {
     "name": "Evan Mobley",
     "aliases": ["evan mobley", "evanmobley"]
   },
-    {
+  {
     "name": "Jalen Green",
     "aliases": ["jalen green", "jalengreen"]
   },
-    {
+  {
     "name": "Cade Cunningham",
     "aliases": ["cade cunningham", "cadecunningham"]
   },
-    {
+  {
     "name": "Chris Duarte",
     "aliases": ["chris duarte", "chrisduarte"]
   },
-    {
+  {
     "name": "Herbert Jones",
     "aliases": ["herbert jones", "herbertjones", "herbetjones", "herbjones", "Herb Jones", "herb jones"]
   },
-    {
+  {
     "name": "Corey Kispert",
     "aliases": ["corey kispert", "coreykispert"]
   },
@@ -3590,5 +3590,9 @@
   {
     "name": "Andrew Nembhard",
     "aliases": ["andrewnembhard", "andrew nembhard"]
+  },
+  {
+    "name": "Isaiah Mobley",
+    "aliases": ["isaiahmobley", "isaiah mobley"]
   }
 ]
