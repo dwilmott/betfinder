@@ -3,7 +3,9 @@ parse_caesars_prop <- function(game_event, prop_name = FALSE, prop_regex = NULL,
   label_vec <- unlist(lapply(game_event$markets, '[[', 'name'))
 
   if (prop_name != FALSE & prop_name %in% label_vec) {
-    prop_content <- game_event$markets[[which(label_vec == prop_name)]]$selections
+    markets <- game_event$markets[[which(label_vec == prop_name)]]
+    if (markets$active == FALSE) return()
+    prop_content <- markets$selections
     outcomes_list <- list()
     for (i in prop_content) {
       new_row <- data.frame(
