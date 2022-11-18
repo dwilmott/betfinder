@@ -5,9 +5,11 @@ get_betrivers_data <- function(sport, save_path = NULL, sleep_time = 0) {
   main_URI <- 'https://il.betrivers.com/api/service/sportsbook/offering/listview/events'
   # set the query params
   main_query <- list(t = list(""),
-                     pageNr = list(""),
+                     pageNr = list("1"),
                      cageCode = list("847"),
-                     groupId = list(group_id_code))
+                     groupId = list(group_id_code),
+                     type = list("prematch"),
+                     pageSize = list("20"))
   main_content <- get_content(main_URI, main_query)
   event_name_list <- list()
   for (i in main_content$items) {
