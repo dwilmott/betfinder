@@ -15,6 +15,9 @@ parse_draftkings_data <- function(draftkings_data, sport, prop = FALSE, game_lin
     matchup <- game_event$event$name
     tipoff <- game_event$event$startDate
 
+    #### JUMP PAST FUTURE GAMES FOR NOW
+    if (as.Date(tipoff) > as.Date(Sys.Date())) next
+
     # break out the offer markets, always necessary
     offer_categories <- game_event$eventCategories
     offer_category_names <- unlist(lapply(offer_categories, '[[', 'name'))
