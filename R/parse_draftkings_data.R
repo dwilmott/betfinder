@@ -16,7 +16,7 @@ parse_draftkings_data <- function(draftkings_data, sport, prop = FALSE, game_lin
     tipoff <- game_event$event$startDate
 
     #### JUMP PAST FUTURE GAMES FOR NOW
-    if (as.Date(tipoff) > as.Date(Sys.Date())) next
+    if (as.Date(tipoff) > as.Date(Sys.Date()) + 1) next
 
     # break out the offer markets, always necessary
     offer_categories <- game_event$eventCategories
@@ -25,6 +25,7 @@ parse_draftkings_data <- function(draftkings_data, sport, prop = FALSE, game_lin
       if (sport %in% c('nba', 'ncaaf', 'nfl', 'mlb')) {
         output_list[[length(output_list) + 1]] <-
           parse_dk_game_lines(offer_categories, exclude_alts = exclude_alts, matchup = matchup, tipoff = tipoff)
+        next
       }
     }
     if (is.null(prop)) {

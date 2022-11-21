@@ -56,7 +56,6 @@ parse_dk_game_lines <- function(offer_categories, exclude_alts, matchup, tipoff)
     gl_subgroups <- c('Game', 'Alternate Spread', 'Alternate Total')
   }
   gl_group_names <- unlist(lapply(game_lines_content, '[[', 'subcategoryName'))
-
   if (!any(gl_subgroups %in% gl_group_names)) return()
   gl_subgroups_content <- game_lines_content[which(gl_group_names %in% gl_subgroups)]
   gl_offers <- lapply(gl_subgroups_content, function(x) x[['offers']][[1]])
