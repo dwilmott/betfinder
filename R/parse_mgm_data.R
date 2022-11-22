@@ -42,7 +42,7 @@ parse_mgm_data <- function(mgm_data, sport, prop = FALSE, game_lines = FALSE) {
 
   # if output_list is empty, error, else return as a data.frame
   if (length(output_list) == 0) stop('no mgm ', prop, ' props returned')
-  output_df <- do.call(rbind, output_list)
+  output_df <- dplyr::bind_rows(output_list)
 
   return(output_df)
 }
