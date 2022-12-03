@@ -2217,7 +2217,7 @@
   },
   {
     "name": "Justise Winslow",
-    "aliases": ["justisewinslow", "justise winslow", "JUSTISE WINSLOW"]
+    "aliases": ["justisewinslow", "justise winslow", "JUSTISE WINSLOW", "justicewinslow", "justice winslow"]
   },
   {
     "name": "Justin Patton",
@@ -3622,5 +3622,9 @@
   {
     "name": "Dyson Daniels",
     "aliases": ["dysondaniels", "dyson daniels"]
+  },
+  {
+    "name": "Wendell Moore",
+    "aliases": ["wendellmoore", "wendell moore"]
   }
 ]
