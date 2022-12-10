@@ -7,10 +7,13 @@ parse_caesars_prop <- function(game_event, prop_name = FALSE, prop_regex = NULL,
     if (markets$active == FALSE) return()
     prop_content <- markets$selections
     outcomes_list <- list()
-    for (i in prop_content) {
+    # browser()
+    if (length(prop_content) == 0) return()
+    for (i in 1:length(prop_content)) {
+      if (prop_content[[i]]$active == FALSE) next
       new_row <- data.frame(
-        name = i[['name']],
-        price = i[['price']][['a']]
+        name = prop_content[[i]][['name']],
+        price = prop_content[[i]][['price']][['a']]
       )
       outcomes_list[[length(outcomes_list) + 1]] <- new_row
     }

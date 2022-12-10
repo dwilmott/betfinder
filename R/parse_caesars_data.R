@@ -28,7 +28,7 @@ parse_caesars_data <- function(caesars_data, sport, prop = FALSE, game_lines = F
     }
     if (prop %in% c('first player to score', 'fpts')) {
       output_list[[length(output_list) + 1]] <-
-        parse_caesars_prop(game_event = game_event, prop_name = '|First Field Goal Of Game|',
+        parse_caesars_prop(game_event = game_event, prop_name = '|First Scorer|',
                        matchup = matchup, tipoff = tipoff)
     }
     if (prop %in% c('fpts by team')) {
