@@ -131,6 +131,9 @@ tidyup_draftkings_data <- function(draftkings_data, sport, prop = FALSE, game_li
     output_df$prop <- prop
   }
 
+  # dedupe
+  output_df <- dplyr::distinct(output_df)
+
   # deliver
   return(output_df)
 
