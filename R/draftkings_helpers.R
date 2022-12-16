@@ -14,7 +14,7 @@ parse_dk_prop <- function(offer_categories, prop_group, prop_subgroup, prop_name
     if (!prop_name %in% prop_subgroup_names) return()
     prop_content <- prop_subgroup_content[[which(prop_subgroup_names == prop_name)]]
     # make a data.frame
-    prop_df <- as.data.frame(do.call(rbind, prop_content$outcomes))
+    prop_df <- as.data.frame(dplyr::bind_rows(prop_content$outcomes))
     prop_df$matchup <- matchup
     prop_df$tipoff <- tipoff
     return(prop_df)
