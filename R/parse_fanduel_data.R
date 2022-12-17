@@ -32,9 +32,19 @@ parse_fanduel_data <- function(fanduel_data, sport, prop = FALSE, game_lines = F
         parse_fd_prop(game_event = game_event, tab_name = tab_name, prop_name = 'Team to Score First',
                       matchup = matchup, tipoff = tipoff)
     }
+    if (prop %in% c('first player to score', 'fpts')) {
+      output_list[[length(output_list) + 1]] <-
+        parse_fd_prop(game_event = game_event, tab_name = 'main', prop_name = 'First Basket',
+                      matchup = matchup, tipoff = tipoff)
+    }
     if (prop %in% c('fpts by team')) {
       output_list[[length(output_list) + 1]] <-
         parse_fd_prop(game_event = game_event, tab_name = 'first_basket', prop_name = 'First Team Basket Scorer',
+                      matchup = matchup, tipoff = tipoff)
+    }
+    if (prop %in% c('fpts exact shot')) {
+      output_list[[length(output_list) + 1]] <-
+        parse_fd_prop(game_event = game_event, tab_name = 'main', prop_name = 'Method of First Basket',
                       matchup = matchup, tipoff = tipoff)
     }
     if (prop %in% c('game go to ot', 'game go to overtime')) {
@@ -59,11 +69,6 @@ parse_fanduel_data <- function(fanduel_data, sport, prop = FALSE, game_lines = F
       # get the right tab
       output_list[[length(output_list) + 1]] <-
         parse_fd_prop(game_event = game_event, tab_name = '4th_quarter', prop_name = '4th Quarter Team to Score First',
-                      matchup = matchup, tipoff = tipoff)
-    }
-    if (prop %in% c('first player to score', 'fpts')) {
-      output_list[[length(output_list) + 1]] <-
-        parse_fd_prop(game_event = game_event, tab_name = 'main', prop_name = 'First Basket',
                       matchup = matchup, tipoff = tipoff)
     }
     if (prop %in% c('player points alt', 'player pts alt')) {
