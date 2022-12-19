@@ -16,6 +16,9 @@ parse_fd_prop <- function(game_event, tab_name, prop_name = NULL, prop_regex = N
   if (!is.null(prop_name)) {
     if (!prop_name %in% bet_markets$name) return()
     market_id <- bet_markets$id[bet_markets$name == prop_name]
+    # if the market is suspended then move on
+    market_status <- tab_markets[[market_id]]$marketStatus
+    if (market_status == 'SUSPENDED') return()
     # get the runners, which is where the bets live
     runners <- tab_markets[[market_id]]$runners
     # run through the runners list and get american odds by player
