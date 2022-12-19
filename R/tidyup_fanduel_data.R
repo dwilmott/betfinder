@@ -76,12 +76,12 @@ tidyup_fanduel_data <- function(fanduel_data, sport, prop = FALSE, game_lines = 
     output_df$tidyamericanodds <- as.numeric(output_df$american_odds)
     output_df$prop <- 'first player to score by team'
   }
-  if (prop %in% c('fpts exact shot')) {
+  if (prop %in% c('fpts shot type')) {
     # split the participant into player and exact shot type
     split_names <- strsplit(output_df$participant, ' - ')
     hacky_tidyplayer <- hacky_tidyup_player_names(unlist(lapply(split_names, '[[', 1)))
     output_df$tidyplayer <- normalize_names(hacky_tidyplayer, key = key)
-    output_df$tidyexact_shot <- unlist(lapply(split_names, '[[', 2))
+    output_df$tidyshot_type <- unlist(lapply(split_names, '[[', 2))
 
     # get the odds and label the prop
     output_df$tidyamericanodds <- as.numeric(output_df$american_odds)

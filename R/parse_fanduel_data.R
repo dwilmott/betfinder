@@ -42,7 +42,7 @@ parse_fanduel_data <- function(fanduel_data, sport, prop = FALSE, game_lines = F
         parse_fd_prop(game_event = game_event, tab_name = 'first_basket', prop_name = 'First Team Basket Scorer',
                       matchup = matchup, tipoff = tipoff)
     }
-    if (prop %in% c('fpts exact shot')) {
+    if (prop %in% c('fpts shot type')) {
       output_list[[length(output_list) + 1]] <-
         parse_fd_prop(game_event = game_event, tab_name = 'main', prop_name = 'Method of First Basket',
                       matchup = matchup, tipoff = tipoff)
