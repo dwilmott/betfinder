@@ -65,7 +65,7 @@ tidyup_mgm_data <- function(mgm_data, sport, prop = FALSE, game_lines = FALSE,
     player_name <- gsub('twopointer$', '', player_name)
     player_name <- gsub('threepointer$', '', player_name)
     output_df$tidyplayer <- normalize_names(player_name, key = key)
-    output_df$tidyshot_points <- ifelse(grepl('Two-', output_df$name.value), 2, 3)
+    output_df$tidyshot_points <- ifelse(grepl('Two|two', output_df$name.value), 2, 3)
     output_df$tidyamericanodds <- as.numeric(output_df$americanOdds)
     output_df$prop <- 'fpts shot points'
   }

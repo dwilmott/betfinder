@@ -32,7 +32,7 @@ get_props <- function(site, sport, prop, raw_data = NULL, save_path = NULL) {
 
   if (site %in% c('fd', 'fanduel')) {
     if (is.null(raw_data)) {
-      fd_raw <- get_fanduel_data(sport = sport, sleep_time = .01, save_path = save_path)
+      fd_raw <- get_fanduel_data(sport = sport, sleep_time = .01, nba_tabs = c(), save_path = save_path)
     } else {
       fd_raw <- raw_data
     }
