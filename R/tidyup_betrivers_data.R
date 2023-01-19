@@ -132,6 +132,8 @@ tidyup_betrivers_data <- function(betrivers_data, sport, prop = FALSE, game_line
   }
 
   # tidyup the matchup! use the team abbreviations from the lookup
+  ## swap out the vs for at for neutral games
+  output_df$matchup <- gsub(' vs ', ' @ ', output_df$matchup)
   matchup_list <- strsplit(output_df$matchup, ' @ ')
   output_df$tidyawayteam <- normalize_names(unlist(lapply(matchup_list, '[[', 1)), key = get_key_path(sport, 'team'))
   output_df$tidyhometeam <- normalize_names(unlist(lapply(matchup_list, '[[', 2)), key = get_key_path(sport, 'team'))
