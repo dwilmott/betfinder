@@ -1217,7 +1217,7 @@
   },
   {
     "name": "Monte Morris",
-    "aliases": ["montemorris", "monte morris", "MONTE MORRIS"]
+    "aliases": ["montemorris", "monte morris", "MONTE MORRIS", "montemorri"]
   },
   {
     "name": "Vlatko Cancar",
@@ -3682,6 +3682,10 @@
   {
     "name": "McKinley Wright IV",
     "aliases": ["mckinleywrightiv", "mckinleywright", "McKinley Wright", "Mckinley Wright IV"]
+  },
+  {
+    "name": "Bryce McGowens",
+    "aliases": ["brycemcgowens", "bryce mcgowens"]
   }
 
 ]
