@@ -69,6 +69,12 @@ tidyup_mgm_data <- function(mgm_data, sport, prop = FALSE, game_lines = FALSE,
     output_df$tidyamericanodds <- as.numeric(output_df$americanOdds)
     output_df$prop <- 'fpts shot points'
   }
+  if (prop %in% c('win tipoff')) {
+    hacky_player_names <- hacky_tidyup_player_names(output_df$name.value)
+    output_df$tidyplayer <- normalize_names(hacky_player_names, key = key)
+    output_df$tidyamericanodds <- as.numeric(output_df$americanOdds)
+    output_df$prop <- 'win tipoff'
+  }
 
   # tidyup the matchup! use the team abbreviations from the lookup
   matchup_list <- strsplit(output_df$matchup, ' @ ')

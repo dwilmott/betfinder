@@ -64,7 +64,7 @@ get_key_path <- function(sport, prop, game_lines = FALSE) {
   key_type <- character()
   if (game_lines == TRUE) {
     key_type <- 'team'
-  } else if (grepl('player|fpts', prop)) {
+  } else if (grepl('player|fpts|tipoff', prop)) {
       key_type <- 'player'
   } else if (grepl('team|ftts', prop)) {
     key_type <- 'team'
