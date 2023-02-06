@@ -725,7 +725,7 @@
   },
   {
     "name": "Larry Nance Jr.",
-    "aliases": ["larrynance", "larry nance jr.", "LARRY NANCE JR.", "Larry Nance"]
+    "aliases": ["larrynance", "larry nance jr.", "LARRY NANCE JR.", "Larry Nance", "lnance"]
   },
   {
     "name": "Cedi Osman",
@@ -745,7 +745,7 @@
   },
   {
     "name": "Edmond Sumner",
-    "aliases": ["edmondsumner", "edmond sumner", "EDMOND SUMNER"]
+    "aliases": ["edmondsumner", "edmond sumner", "EDMOND SUMNER", "edmondsummer"]
   },
   {
     "name": "Damyean Dotson",
@@ -1081,7 +1081,7 @@
   },
   {
     "name": "Grayson Allen",
-    "aliases": ["graysonallen", "grayson allen", "GRAYSON ALLEN"]
+    "aliases": ["graysonallen", "grayson allen", "GRAYSON ALLEN", "graysonalle"]
   },
   {
     "name": "De'Anthony Melton",
@@ -3677,15 +3677,18 @@
   },
   {
     "name": "Daishen Nix",
-    "aliases": ["daishennix", "daishen nix"]
+    "aliases": ["daishennix", "daishen nix", "dnix"]
   },
   {
     "name": "McKinley Wright IV",
-    "aliases": ["mckinleywrightiv", "mckinleywright", "McKinley Wright", "Mckinley Wright IV"]
+    "aliases": ["mckinleywrightiv", "mckinleywright", "McKinley Wright", "Mckinley Wright IV", "mwright"]
   },
   {
     "name": "Bryce McGowens",
     "aliases": ["brycemcgowens", "bryce mcgowens"]
+  },
+  {
+    "name": "Jaden Hardy",
+    "aliases": ["jadenhardy", "jaden hardy"]
   }
-
 ]
