@@ -3573,7 +3573,7 @@
   },
   {
     "name": "Jaylin Williams",
-    "aliases": ["jaylinwilliams", "jaylin williams"]
+    "aliases": ["jaylinwilliams", "jaylin williams", "jaylnwilliams"]
   },
   {
     "name": "Malaki Branham",
@@ -3694,5 +3694,9 @@
   {
     "name": "Sam Hauser",
     "aliases": ["samhauser", "sam hauser"]
+  },
+  {
+    "name": "Ish Wainright",
+    "aliases": ["ishwainright", "ish wainright", "ishmailwainright", "ishmail wainright"]
   }
 ]
