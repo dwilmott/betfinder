@@ -51,6 +51,17 @@ tidyup_draftkings_data <- function(draftkings_data, sport, prop = FALSE, game_li
     output_df$prop <- 'ftts shot points'
   }
 
+  if (prop %in% c('first shot points')) {
+    # generate tidy names and odds
+    output_df$tidyteam <- 'game'
+    output_df$tidyshot_points <- readr::parse_number(substr(output_df$label,(nchar(output_df$label)+1)-8,nchar(output_df$label)))
+    output_df$tidyplayer <- 'game'
+    output_df$tidyamericanodds <- as.numeric(output_df$oddsAmerican)
+    # for flexible prop names, specify the value explicitly here
+    output_df$prop <- 'first shot points'
+  }
+
+
 
   if (prop %in% c('game go to ot', 'game go to overtime')) {
     # generate tidy names and odds

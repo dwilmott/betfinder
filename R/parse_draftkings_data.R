@@ -52,6 +52,9 @@ parse_draftkings_data <- function(draftkings_data, sport, prop = FALSE, game_lin
     if (prop %in% c('ftts shot points')) {
       output_list[[length(output_list) + 1]] <- parse_dk_prop(offer_categories, prop_group = '1st Basket Props', prop_subgroup = "First FG - Exact", prop_name = "First Field Goal Type Exact", prop = prop, matchup = matchup, tipoff = tipoff)
     }
+    if (prop %in% c('first shot points')) {
+      output_list[[length(output_list) + 1]] <- parse_dk_prop(offer_categories, prop_group = '1st Basket Props', prop_subgroup = "First FG - Type", prop_name = "First Field Goal Type", prop = prop, matchup = matchup, tipoff = tipoff)
+    }
     if (prop %in% c('player points ou', 'player pts ou')) {
       output_list[[length(output_list) + 1]] <- parse_dk_prop(offer_categories, prop_group = 'Player Props', prop_subgroup = 'Points', prop_regex = ' Points$', prop = prop, matchup = matchup, tipoff = tipoff)
     }
