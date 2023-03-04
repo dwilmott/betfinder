@@ -4,7 +4,7 @@ get_fanduel_data <- function(sport, save_path = NULL,
                                       'player-combos', '1st-quarter', '2nd-quarter', '3rd-quarter', '4th-quarter',
                                       'first-basket'),
                              nfl_tabs = c('player-props', 'same-game-parlay-', '1st-half', '2nd-half',
-                                          '1st-quarter', '2nd-quarter', '3rd-quarter', '4th-quarter'),
+                                          '1st-quarter', '2nd-quarter', '3rd-quarter', '4th-quarter', 'nfl-draft', 'super-bowl'),
                              nhl_tabs = c('player-goals', 'player-points', 'player-assists', 'player-shots', 'goalie-props'),
                              sleep_time = 0) {
 

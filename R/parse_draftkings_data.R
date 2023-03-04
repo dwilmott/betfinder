@@ -3,6 +3,7 @@ parse_draftkings_data <- function(draftkings_data, sport, prop = FALSE, game_lin
   output_list <- list()
 
   for (e in names(draftkings_data)) {
+
     game_event <- draftkings_data[[e]]
 
     # nuke live games if specified, which is the default
