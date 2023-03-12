@@ -1,21 +1,11 @@
 get_caesars_data <- function(sport, save_path = NULL, sleep_time = 0) {
 
-  # get all the events, and index by sportId
-  main_URI <- 'https://www.williamhill.com/us/il/bet/api/v3/events/highlights/?promotedOnly=false'
-  main_query <- list()
-  main_content <- get_content(main_URI, main_query)
-  sport_index <- unlist(lapply(main_content, '[[', 'sportId'))
-
-  if (sport == 'nfl') {
-    sport_element <- main_content[[which(sport_index == 'americanfootball')]]
-    competition_index <- unlist(lapply(sport_element$competitions, '[[', 'name'))
-    competition <- sport_element$competitions[[which(competition_index == 'NFL')]]
-  }
-
   if (sport == 'nba') {
-    sport_element <- main_content[[which(sport_index == 'basketball')]]
-    competition_index <- unlist(lapply(sport_element$competitions, '[[', 'name'))
-    competition <- sport_element$competitions[[which(competition_index == 'NBA')]]
+    main_URI <- 'https://api.americanwagering.com/regions/us/locations/il/brands/czr/sb/v3/sports/basketball/events/schedule/'
+    main_query <- list()
+    main_content <- get_content(main_URI, main_query)
+    competition_index <- unlist(lapply(main_content$competitions, '[[', 'name'))
+    competition <- main_content$competitions[[which(competition_index == 'NBA')]]
   }
 
   event_name_list <- list()
@@ -37,7 +27,7 @@ get_caesars_data <- function(sport, save_path = NULL, sleep_time = 0) {
     # sleep to be nice
     Sys.sleep(sleep_time)
     # make the json string using the event_id, then grab the json
-    event_URI <- paste0('https://www.williamhill.com/us/il/bet/api/v3/events/', e)
+    event_URI <- paste0('https://api.americanwagering.com/regions/us/locations/il/brands/czr/sb/v3/events/', e)
     event_query <- list()
     event_content <- get_content(uri = event_URI, query = event_query)
     event_list[[as.character(e)]] <- event_content
