@@ -39,7 +39,7 @@ parse_fanduel_data <- function(fanduel_data, sport, prop = FALSE, game_lines = F
     }
     if (prop %in% c('fpts by team')) {
       output_list[[length(output_list) + 1]] <-
-        parse_fd_prop(game_event = game_event, tab_name = 'first_basket', prop_name = 'First Team Basket Scorer',
+        parse_fd_prop(game_event = game_event, tab_name = 'quick_bets', prop_name = 'First Team Basket Scorer',
                       matchup = matchup, tipoff = tipoff)
     }
     if (prop %in% c('fpts shot type')) {
