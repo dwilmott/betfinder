@@ -1,5 +1,5 @@
 get_fanduel_data <- function(sport, save_path = NULL,
-                             mlb_tabs = c('hits-runs', 'same-game-parlay-', 'innings'),
+                             mlb_tabs = c('hits-runs', 'same-game-parlay-', 'innings', 'pitcher-props', 'batter-props'),
                              nba_tabs = c('player-points', 'player-rebounds', 'player-assists', 'player-threes',
                                       'player-combos', '1st-quarter', '2nd-quarter', '3rd-quarter', '4th-quarter',
                                       'quick-bets'),
