@@ -7,6 +7,13 @@ get_caesars_data <- function(sport, save_path = NULL, sleep_time = 0) {
     competition_index <- unlist(lapply(main_content$competitions, '[[', 'name'))
     competition <- main_content$competitions[[which(competition_index == 'NBA')]]
   }
+   else if (sport == 'mlb') {
+    main_URI <- 'https://api.americanwagering.com/regions/us/locations/il/brands/czr/sb/v3/sports/baseball/events/schedule/'
+    main_query <- list()
+    main_content <- get_content(main_URI, main_query)
+    competition_index <- unlist(lapply(main_content$competitions, '[[', 'name'))
+    competition <- main_content$competitions[[which(competition_index == 'MLB')]]
+  }
 
   event_name_list <- list()
   for (i in competition$events) {
